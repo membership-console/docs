@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://membership-console.github.com/docs/PRD/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://membership-console.github.com/docs/%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99-Branch%E7%AE%A1%E7%90%86/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>PRD - membership console</title>
+    <title>開発用資料／Branch 管理 - membership console</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "PRD";
-        var mkdocs_page_input_path = "PRD.md";
-        var mkdocs_page_url = "/docs/PRD/";
+        var mkdocs_page_name = "\u958b\u767a\u7528\u8cc7\u6599\uff0fBranch \u7ba1\u7406";
+        var mkdocs_page_input_path = "\u958b\u767a\u7528\u8cc7\u6599-Branch\u7ba1\u7406.md";
+        var mkdocs_page_url = "/docs/%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99-Branch%E7%AE%A1%E7%90%86/";
       </script>
     
     <script src="../js/jquery-3.6.0.min.js" defer></script>
@@ -44,14 +44,18 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">はじめに</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">PRD</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../PRD/">PRD</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99-Branch%E7%AE%A1%E7%90%86/">開発用資料／Branch 管理</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">開発用資料／Branch 管理</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#branch_1">Branch リスト</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_1">イメージ図</a>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -72,7 +76,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>PRD</li>
+      <li>開発用資料／Branch 管理</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -81,49 +85,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="_1">概要</h2>
-<p>本システムは、RCC 内製のグループウェアです。</p>
-<p>マイクロサービスアーキテクチャで設計されており、開発者は簡単にプロダクトの新規開発、メンテナンスを行えます。</p>
-<h2 id="_2">背景</h2>
-<p>本サービスは、下記の 2 点を目的としています。</p>
-<ul>
-<li>新規プロダクト開発の支援</li>
-<li>認証・フロントエンド基盤が共通化されているため実装コストが低い</li>
-<li>マイクロサービスで設計されているためメンテナンスが楽</li>
-<li>複数のプロダクトを統合 UI から提供</li>
-<li>プロダクトごとのログインやページリンクを探す手間が無くなり、ユーザに与える煩わしさを解消できる</li>
-</ul>
-<h2 id="_3">製品原則</h2>
-<ul>
-<li>IAM 管理者が発行したアカウントからログインできること</li>
-<li>IAM からプロダクトごとの RBAC を設定できること</li>
-<li>開発者が後から新規プロダクトを追加できること</li>
-</ul>
-<h2 id="_4">スコープ</h2>
-<ul>
-<li>モバイル端末は考慮しない</li>
-<li>最新版の Google Chrome、Firefox 以外の Web ブラウザは考慮しない</li>
-</ul>
-<h2 id="_5">対象ユーザ</h2>
-<ul>
-<li>RCC 会員</li>
-</ul>
-<h2 id="_6">ユースケース</h2>
-<ul>
-<li>IAM から各プロダクトの RBAC を設定できる</li>
-<li>複数ロールを割り当てたユーザグループを作成できる</li>
-<li>ユーザグループをユーザに割り当てられる</li>
-<li>API Gatewayを通じて各プロダクトにアクセスできる</li>
-<li>ユーザに対して連絡メールを送信できる</li>
-<li>投稿先を指定できる</li>
-<li>リマインダーを設定できる</li>
-</ul>
+                <h1 id="branch">開発用資料／Branch 管理</h1>
+<h2 id="branch_1">Branch リスト</h2>
+<table>
+<thead>
+<tr>
+<th>ブランチ名</th>
+<th>概要</th>
+<th>環境</th>
+<th>命名規則</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>master</td>
+<td>本番環境で運用するコード。</td>
+<td>本番環境</td>
+<td>ー</td>
+</tr>
+<tr>
+<td>develop</td>
+<td>開発環境で運用するコード。</td>
+<td>開発環境</td>
+<td>ー</td>
+</tr>
+<tr>
+<td>hotfix</td>
+<td>master で発生したバグに緊急対応するためのブランチ。</td>
+<td>ー</td>
+<td><code>hotfix/{issue番号}_{概要}</code></td>
+</tr>
+<tr>
+<td>feature</td>
+<td>実装中の Unstable なコード。</td>
+<td>ー</td>
+<td><code>feature/{issue番号}_{概要}</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1">イメージ図</h2>
+<p><img alt="" src="https://i0.wp.com/lanziani.com/slides/gitflow/images/gitflow_1.png?zoom=2" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="はじめに"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99-Branch%E7%AE%A1%E7%90%86/" class="btn btn-neutral float-right" title="開発用資料／Branch 管理">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../PRD/" class="btn btn-neutral float-left" title="PRD"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99-IDE%E8%A8%AD%E5%AE%9A%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/" class="btn btn-neutral float-right" title="開発用資料／IDE 設定ポリシー">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -146,10 +153,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../PRD/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99-Branch%E7%AE%A1%E7%90%86/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99-IDE%E8%A8%AD%E5%AE%9A%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
