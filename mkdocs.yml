@@ -7,8 +7,8 @@ theme:
   language: ja
   name: material
   palette:
-    accent: Green
-    primary: Green
+    primary: Indigo
+    accent: Indigo
   features:
     - navigation.top
     - navigation.instant
