@@ -8,17 +8,24 @@
          
     </url>
     <url>
-         <loc>https://membership-console.github.com/docs/PRD/</loc>
+         <loc>https://membership-console.github.com/docs/Getting%20Started/PRD/</loc>
          <lastmod>2022-10-09</lastmod>
          <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="ja" href="https://membership-console.github.com/docs/ja/PRD/"/>
+         <xhtml:link rel="alternate" hreflang="ja" href="https://membership-console.github.com/docs/ja/Getting%20Started/PRD/"/>
          
     </url>
     <url>
-         <loc>https://membership-console.github.com/docs/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/RBAC%EF%BC%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B9%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1%EF%BC%89/</loc>
+         <loc>https://membership-console.github.com/docs/Getting%20Started/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%AC%E3%82%A4%E3%83%89/</loc>
          <lastmod>2022-10-09</lastmod>
          <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="ja" href="https://membership-console.github.com/docs/ja/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/RBAC%EF%BC%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B9%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1%EF%BC%89/"/>
+         <xhtml:link rel="alternate" hreflang="ja" href="https://membership-console.github.com/docs/ja/Getting%20Started/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%AC%E3%82%A4%E3%83%89/"/>
+         
+    </url>
+    <url>
+         <loc>https://membership-console.github.com/docs/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/RBAC/</loc>
+         <lastmod>2022-10-09</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="ja" href="https://membership-console.github.com/docs/ja/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/RBAC/"/>
          
     </url>
     <url>
