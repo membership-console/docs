@@ -14,6 +14,7 @@ theme:
     - navigation.instant
   icon:
     repo: fontawesome/brands/github
+  favicon: assets/favicon.svg
 
 extra:
   social:
