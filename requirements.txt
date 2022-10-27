@@ -14,6 +14,5 @@ mkdocs-rss-plugin
 mkdocs-drawio-exporter
 plantuml-markdown
 mkdocs-glightbox
-mkdocs-static-i18n
 mkdocs-roamlinks-plugin
 mdx_truly_sane_lists

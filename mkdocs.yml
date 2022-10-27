@@ -37,10 +37,6 @@ extra_javascript:
   - https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js
 
 plugins:
-  - i18n:
-      default_language: ja
-      languages:
-        ja: Japanese
   - search:
       lang:
         - ja
