@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://membership-console.github.com/docs/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/%E8%AA%8D%E8%A8%BC%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF/">
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -84,6 +84,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#client-credentials-grant-flow" class="md-skip">
+          コンテンツにスキップ
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -364,9 +369,72 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          認証の仕組み
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         認証の仕組み
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client-credentials-grant-flow" class="md-nav__link">
+    Client Credentials Grant Flow
+  </a>
+  
+    <nav class="md-nav" aria-label="Client Credentials Grant Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oauth" class="md-nav__link">
+    OAuth クライアントの作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    アクセストークンの取得
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    リソースサーバへのアクセス
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sso" class="md-nav__link">
+    SSO について
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -473,6 +541,55 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client-credentials-grant-flow" class="md-nav__link">
+    Client Credentials Grant Flow
+  </a>
+  
+    <nav class="md-nav" aria-label="Client Credentials Grant Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oauth" class="md-nav__link">
+    OAuth クライアントの作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    アクセストークンの取得
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    リソースサーバへのアクセス
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sso" class="md-nav__link">
+    SSO について
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -493,9 +610,45 @@
 
   <h1>認証の仕組み</h1>
 
-<div class="admonition 認証方法について記載予定">
-<p class="admonition-title">認証方法について記載予定</p>
+<h2 id="client-credentials-grant-flow">Client Credentials Grant Flow<a class="headerlink" href="#client-credentials-grant-flow" title="Permanent link">¶</a></h2>
+<p>Client Credentials Grant Flow は、ユーザの手続きなくリソースサーバに問い合わせするための認証フローです。</p>
+<p>本プロジェクトはマイクロサービスアーキテクチャを採用しており、各サービスを OAuth クライアントとして実装します。</p>
+<h3 id="oauth">OAuth クライアントの作成<a class="headerlink" href="#oauth" title="Permanent link">¶</a></h3>
+<p>まず、IAM から OAuth クライアントを手動で作成します。</p>
+<div class="admonition 発行した認証情報は厳重に管理してください">
+<p class="admonition-title">発行した認証情報は厳重に管理してください</p>
 </div>
+<h3 id="_1">アクセストークンの取得<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p>IAM で作成した OAuth クライアントを使って、アクセストークンを取得します。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>curl -H <span class="s2">&quot;Content-Type: application/x-www-form-urlencoded&quot;</span> <span class="se">\</span>
+  -H <span class="s2">&quot;Authorization: Basic {クライアントID}:{クライアントシークレット}&quot;</span> <span class="se">\</span>
+  -X POST <span class="s2">&quot;https://{domain}/oauth2/token&quot;</span> <span class="se">\</span>
+  -d <span class="s2">&quot;grant_type=client_credentials&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>認証に成功すると、以下のようなレスポンスを得られます。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJraWQiOiI0MGUxMGI5Yy1kZDMyLTQ1OTctYjc1Mi04YTRhZmJjNTQxYjAiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjbGllbnQxIiwiYXVkIjoiY2xpZW50MSIsIm5iZiI6MTY2Njg2MDY2MCwic2NvcGUiOlsibWUiLCJ1c2VyIl0sImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDgwIiwiZXhwIjoxNjY2ODYxNTYwLCJpYXQiOjE2NjY4NjA2NjB9.IrPxmwT0SAc6NQmeVQ4XeLehQIqz45jQbiBzEY6NMpmJgdoFhQOlIbgiIlJMTxfqhaGqf0IHy3D9rGx45QrAsLlXVPelQHJiELS3QEJ_SSdFDWsGNWMNBMaCxXhuwjr_xq-7idHJHjndCTatiK8eeIXrOlRP5-N3gQBGXCDRjQZR1O6x1LZM1p6ZjFMWNi3Xzh8Dfhp_IdPLBecuyx50mFprAuFhN66ClBsCE4H0emeZuaOEQTUAXGbtUwIrWUsFmMeuSCSRsmZPoDGRQ5RWuf4XXf8R4M4TTB3RUxxuGIjiS04bBpTYoXlt6Ppyn9mJa_z61FszYKWwlfxoZGr1Jg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;me user&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bearer&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="_2">リソースサーバへのアクセス<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>認可サーバである IAM から発行されたアクセストークンを使うと、リソースサーバへの問い合わせが可能になります。</p>
+<p>問い合わせ時は、Authorization ヘッダーに先ほど得られたアクセストークンを指定してください。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Authorization: Bearer {アクセストークン}
+</code></pre></div></td></tr></table></div>
+<h2 id="sso">SSO について<a class="headerlink" href="#sso" title="Permanent link">¶</a></h2>
+<p>現時点は IAM を SSO プロバイダとして提供する予定はありません。</p>
+<p>IAM のユーザデータを利用したい場合は、Membership Console の一機能としてリリースすることを検討してください。</p>
 
 
   
@@ -607,10 +760,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
       
