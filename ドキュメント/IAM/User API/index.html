@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://membership-console.github.com/docs/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/%E8%AA%8D%E8%A8%BC%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF/">
+        <link rel="canonical" href="https://membership-console.github.com/docs/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/IAM/User%20API/">
       
-      <link rel="icon" href="../../assets/favicon.svg">
+      <link rel="icon" href="../../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>認証の仕組み - membership console</title>
+        <title>User API - membership console</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
           
           
@@ -43,13 +43,13 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <link rel="stylesheet" href="https://unpkg.com/mermaid@8.0.0/dist/mermaid.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#client-credentials-grant-flow" class="md-skip">
+        <a href="#api" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -100,7 +100,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href="../.." title="membership console" class="md-header__button md-logo" aria-label="membership console" data-md-component="logo">
+    <a href="../../.." title="membership console" class="md-header__button md-logo" aria-label="membership console" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              認証の仕組み
+              User API
             
           </span>
         </div>
@@ -198,7 +198,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="membership console" class="md-nav__button md-logo" aria-label="membership console" data-md-component="logo">
+    <a href="../../.." title="membership console" class="md-nav__button md-logo" aria-label="membership console" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -229,7 +229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         はじめに
       </a>
     </li>
@@ -270,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Getting%20Started/PRD/" class="md-nav__link">
+      <a href="../../../Getting%20Started/PRD/" class="md-nav__link">
         PRD
       </a>
     </li>
@@ -284,7 +284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Getting%20Started/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%AC%E3%82%A4%E3%83%89/" class="md-nav__link">
+      <a href="../../../Getting%20Started/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%AC%E3%82%A4%E3%83%89/" class="md-nav__link">
         スタートガイド
       </a>
     </li>
@@ -334,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RBAC/" class="md-nav__link">
+      <a href="../../RBAC/" class="md-nav__link">
         RBAC
       </a>
     </li>
@@ -348,8 +348,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E6%8A%80%E8%A1%93%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF/" class="md-nav__link">
+      <a href="../../%E6%8A%80%E8%A1%93%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF/" class="md-nav__link">
         技術スタック
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          IAM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IAM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          IAM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Email%20API/" class="md-nav__link">
+        Email API
       </a>
     </li>
   
@@ -370,12 +412,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          認証の仕組み
+          User API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        認証の仕組み
+        User API
       </a>
       
         
@@ -392,23 +434,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#client-credentials-grant-flow" class="md-nav__link">
-    Client Credentials Grant Flow
+  <a href="#api" class="md-nav__link">
+    ユーザリスト取得 API
   </a>
   
-    <nav class="md-nav" aria-label="Client Credentials Grant Flow">
+    <nav class="md-nav" aria-label="ユーザリスト取得 API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#oauth" class="md-nav__link">
-    OAuth クライアントの作成
+  <a href="#uri" class="md-nav__link">
+    URI
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    アクセストークンの取得
+    レスポンスボディ
   </a>
   
 </li>
@@ -419,23 +461,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#api_1" class="md-nav__link">
+    ユーザ取得 API
+  </a>
+  
+    <nav class="md-nav" aria-label="ユーザ取得 API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uri_1" class="md-nav__link">
+    URI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    リソースサーバへのアクセス
+    レスポンスボディ
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    スコープ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sso" class="md-nav__link">
-    SSO について
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -443,6 +491,27 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AA%8D%E8%A8%BC%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF/" class="md-nav__link">
+        認証の仕組み
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -488,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99/Branch%E7%AE%A1%E7%90%86/" class="md-nav__link">
+      <a href="../../../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99/Branch%E7%AE%A1%E7%90%86/" class="md-nav__link">
         Branch管理
       </a>
     </li>
@@ -502,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99/IDE%E8%A8%AD%E5%AE%9A%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/" class="md-nav__link">
+      <a href="../../../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99/IDE%E8%A8%AD%E5%AE%9A%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/" class="md-nav__link">
         IDE設定ポリシー
       </a>
     </li>
@@ -516,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99/%E6%A4%9C%E8%A8%BC%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BD%9C%E6%88%90/" class="md-nav__link">
+      <a href="../../../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99/%E6%A4%9C%E8%A8%BC%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BD%9C%E6%88%90/" class="md-nav__link">
         検証用データの作成
       </a>
     </li>
@@ -555,23 +624,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#client-credentials-grant-flow" class="md-nav__link">
-    Client Credentials Grant Flow
+  <a href="#api" class="md-nav__link">
+    ユーザリスト取得 API
   </a>
   
-    <nav class="md-nav" aria-label="Client Credentials Grant Flow">
+    <nav class="md-nav" aria-label="ユーザリスト取得 API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#oauth" class="md-nav__link">
-    OAuth クライアントの作成
+  <a href="#uri" class="md-nav__link">
+    URI
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    アクセストークンの取得
+    レスポンスボディ
   </a>
   
 </li>
@@ -582,23 +651,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#api_1" class="md-nav__link">
+    ユーザ取得 API
+  </a>
+  
+    <nav class="md-nav" aria-label="ユーザ取得 API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uri_1" class="md-nav__link">
+    URI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    リソースサーバへのアクセス
+    レスポンスボディ
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    スコープ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sso" class="md-nav__link">
-    SSO について
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -616,72 +691,92 @@
                 
                   
 
-  <a href="https://github.com/membership-console/docs/edit/master/docs/ドキュメント/認証の仕組み.md" title="編集" class="md-content__button md-icon">
+  <a href="https://github.com/membership-console/docs/edit/master/docs/ドキュメント/IAM/User API.md" title="編集" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>認証の仕組み</h1>
+  <h1>User API</h1>
 
-<h2 id="client-credentials-grant-flow">Client Credentials Grant Flow<a class="headerlink" href="#client-credentials-grant-flow" title="Permanent link">¶</a></h2>
-<p>Client Credentials Grant Flow は、ユーザの手続きなくリソースサーバに問い合わせするための認証フローです。</p>
-<p>本プロジェクトはマイクロサービスアーキテクチャを採用しており、各サービスを OAuth クライアントとして実装します。</p>
-<h3 id="oauth">OAuth クライアントの作成<a class="headerlink" href="#oauth" title="Permanent link">¶</a></h3>
-<p>まず、IAM から OAuth クライアントを手動で作成します。</p>
-<div class="admonition 発行した認証情報は厳重に管理してください">
-<p class="admonition-title">発行した認証情報は厳重に管理してください</p>
-</div>
-<h3 id="_1">アクセストークンの取得<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p>IAM で作成した OAuth クライアントを使って、アクセストークンを取得します。</p>
+<h2 id="api">ユーザリスト取得 API<a class="headerlink" href="#api" title="Permanent link">¶</a></h2>
+<h3 id="uri">URI<a class="headerlink" href="#uri" title="Permanent link">¶</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>curl -H <span class="s2">&quot;Content-Type: application/x-www-form-urlencoded&quot;</span> <span class="se">\</span>
-  -H <span class="s2">&quot;Authorization: Basic {クライアントID}:{クライアントシークレット}&quot;</span> <span class="se">\</span>
-  -X POST <span class="s2">&quot;https://{domain}/oauth2/token&quot;</span> <span class="se">\</span>
-  -d <span class="s2">&quot;grant_type=client_credentials&quot;</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>GET
+/api/admin/users
 </code></pre></div></td></tr></table></div>
-<p>認証に成功すると、以下のようなレスポンスを得られます。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJraWQiOiI0MGUxMGI5Yy1kZDMyLTQ1OTctYjc1Mi04YTRhZmJjNTQxYjAiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjbGllbnQxIiwiYXVkIjoiY2xpZW50MSIsIm5iZiI6MTY2Njg2MDY2MCwic2NvcGUiOlsibWUiLCJ1c2VyIl0sImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDgwIiwiZXhwIjoxNjY2ODYxNTYwLCJpYXQiOjE2NjY4NjA2NjB9.IrPxmwT0SAc6NQmeVQ4XeLehQIqz45jQbiBzEY6NMpmJgdoFhQOlIbgiIlJMTxfqhaGqf0IHy3D9rGx45QrAsLlXVPelQHJiELS3QEJ_SSdFDWsGNWMNBMaCxXhuwjr_xq-7idHJHjndCTatiK8eeIXrOlRP5-N3gQBGXCDRjQZR1O6x1LZM1p6ZjFMWNi3Xzh8Dfhp_IdPLBecuyx50mFprAuFhN66ClBsCE4H0emeZuaOEQTUAXGbtUwIrWUsFmMeuSCSRsmZPoDGRQ5RWuf4XXf8R4M4TTB3RUxxuGIjiS04bBpTYoXlt6Ppyn9mJa_z61FszYKWwlfxoZGr1Jg&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;me user&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bearer&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="w"></span>
+<h3 id="_1">レスポンスボディ<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;users&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;firstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;lastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;entranceYear&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;userGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;roles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">]</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h2 id="_2">リソースサーバへのアクセス<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>認可サーバである IAM から発行されたアクセストークンを使うと、リソースサーバへの問い合わせが可能になります。</p>
-<p>問い合わせ時は、Authorization ヘッダーに先ほど得られたアクセストークンを指定してください。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Authorization: Bearer {アクセストークン}
+<h2 id="api_1">ユーザ取得 API<a class="headerlink" href="#api_1" title="Permanent link">¶</a></h2>
+<h3 id="uri_1">URI<a class="headerlink" href="#uri_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>GET
+/api/admin/users/{user_id}
 </code></pre></div></td></tr></table></div>
-<h2 id="_3">スコープ<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>スコープ</th>
-<th>概要</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>user:read</td>
-<td>ユーザリスト、もしくは個別の情報を取得できます。</td>
-</tr>
-<tr>
-<td>email</td>
-<td>ユーザに向けてメールを送信できます。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="sso">SSO について<a class="headerlink" href="#sso" title="Permanent link">¶</a></h2>
-<p>現時点は IAM を SSO プロバイダとして提供する予定はありません。</p>
-<p>IAM のユーザデータを利用したい場合は、Membership Console の一機能としてリリースすることを検討してください。</p>
+<h3 id="_2">レスポンスボディ<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;firstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;lastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;entranceYear&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;userGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;roles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 
 
   
@@ -709,7 +804,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="../%E6%8A%80%E8%A1%93%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF/" class="md-footer__link md-footer__link--prev" aria-label="前: 技術スタック" rel="prev">
+        <a href="../Email%20API/" class="md-footer__link md-footer__link--prev" aria-label="前: Email API" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -718,20 +813,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              技術スタック
+              Email API
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99/Branch%E7%AE%A1%E7%90%86/" class="md-footer__link md-footer__link--next" aria-label="次: Branch管理" rel="next">
+        <a href="../%E8%AA%8D%E8%A8%BC%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF/" class="md-footer__link md-footer__link--next" aria-label="次: 認証の仕組み" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              Branch管理
+              認証の仕組み
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -793,10 +888,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
       
