@@ -426,6 +426,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    スコープ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sso" class="md-nav__link">
     SSO について
   </a>
@@ -582,6 +589,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    スコープ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sso" class="md-nav__link">
     SSO について
   </a>
@@ -646,6 +660,25 @@
 <p>問い合わせ時は、Authorization ヘッダーに先ほど得られたアクセストークンを指定してください。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Authorization: Bearer {アクセストークン}
 </code></pre></div></td></tr></table></div>
+<h2 id="_3">スコープ<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>スコープ</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user:read</td>
+<td>ユーザリスト、もしくは個別の情報を取得できます。</td>
+</tr>
+<tr>
+<td>email</td>
+<td>ユーザに向けてメールを送信できます。</td>
+</tr>
+</tbody>
+</table>
 <h2 id="sso">SSO について<a class="headerlink" href="#sso" title="Permanent link">¶</a></h2>
 <p>現時点は IAM を SSO プロバイダとして提供する予定はありません。</p>
 <p>IAM のユーザデータを利用したい場合は、Membership Console の一機能としてリリースすることを検討してください。</p>
