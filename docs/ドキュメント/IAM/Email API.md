@@ -4,7 +4,7 @@
 
 ```
 POST
-/api/admin/email/send
+/api/oauth2/email/send
 ```
 
 ### リクエストボディ

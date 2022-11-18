@@ -4,7 +4,7 @@
 
 ```
 GET
-/api/admin/users
+/api/oauth2/users
 ```
 
 ### レスポンスボディ
@@ -36,7 +36,7 @@ GET
 
 ```
 GET
-/api/admin/users/{user_id}
+/api/oauth2/users/{user_id}
 ```
 
 ### レスポンスボディ
