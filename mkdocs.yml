@@ -1,6 +1,7 @@
 site_name: membership console
 repo_url: https://github.com/membership-console/docs
 site_url: https://membership-console.github.com/docs
+docs_dir: src
 site_dir: public
 
 theme:
