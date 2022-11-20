@@ -56,6 +56,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://membership-console.github.com/docs/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88/Paymaster/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/</loc>
+         <lastmod>2022-11-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://membership-console.github.com/docs/%E9%96%8B%E7%99%BA%E7%94%A8%E8%B3%87%E6%96%99/Branch%E7%AE%A1%E7%90%86/</loc>
          <lastmod>2022-11-20</lastmod>
          <changefreq>daily</changefreq>
