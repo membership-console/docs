@@ -130,3 +130,12 @@ div.md-grid {
 .orange-badge {
   background-color: #f09c00; /*オレンジ*/
 }
+
+blockquote {
+  background: rgba(10, 133, 255, 0.14);
+  border-left: 4px solid #0066cc !important;
+  border-radius: 4px;
+  color: #666;
+  margin: 0;
+  padding: 1px 20px;
+}
