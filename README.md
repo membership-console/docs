@@ -4,19 +4,15 @@
 
 本リポジトリは Membership Console のドキュメントです。
 
-## ビルド方法
-
-```sh
-$ pip install -r requirements.txt
-$ mkdocs build --strict
-```
-
-## サーバを起動
+## 開発用サーバを起動
 
 ```sh
 $ mkdocs serve
 ```
 
-## 公開先
+## 静的コンテンツをビルド
 
-- [membership-console.github.io/docs](https://membership-console.github.io/docs/)
+```sh
+$ pip install -r requirements.txt
+$ mkdocs build --strict
+```
