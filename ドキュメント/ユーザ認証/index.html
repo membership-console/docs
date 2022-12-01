@@ -797,7 +797,7 @@
 
 <p>Membership Console のユーザ認証方法を紹介します。</p>
 <h2 id="_1">ユーザ認証の流れ<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
-<p>下図は、ユーザがログイン後に購入申請する流れを表しています。</p>
+<p>下図は、ユーザがログイン後に購入申請する流れを示しています。</p>
 <p><img alt="" src="../../assets/user_authentication.png" /></p>
 <h2 id="iam">IAM<a class="headerlink" href="#iam" title="Permanent link">¶</a></h2>
 <p>ログインに成功すると、発行したセッション ID を Cookie に保存します。</p>
@@ -810,9 +810,9 @@ API Gateway 経由でログインユーザ情報を付与された状態でリ�
 認証必須のリソースが<code>Authorization</code>ヘッダが空のリクエストを受信した場合は 401 レスポンスを返却すれば OK です。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Authorization: User {&quot;id&quot;: XXX, &quot;firstName&quot;: &quot;XXX&quot;, lastName: &quot;XXX&quot;, email: &quot;XXX&quot;, entranceYear: XXX, roles: [XXX, XXX]}
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Authorization: User {&quot;id&quot;: XXX, &quot;firstName&quot;: &quot;XXX&quot;, lastName: &quot;XXX&quot;, email: &quot;XXX&quot;, entranceYear: XXX, userGroups: [{&quot;id&quot;: XXX, &quot;name&quot;: &quot;XXX&quot;, roles: []}]}
 
-認証タイプをUserにすることでAPI Gateway Patternのユーザ認証を実現する例があったので採用したが、より良い方法があるかも知れない
+認証タイプをUserにすることでAPI Gateway Patternのユーザ認証を実現する例があったので採用したが、より良い方法があるかも知れない。
 </code></pre></div></td></tr></table></div>
 <table>
 <thead>
@@ -849,7 +849,22 @@ API Gateway 経由でログインユーザ情報を付与された状態でリ�
 <td>入学年度</td>
 </tr>
 <tr>
-<td>roles</td>
+<td>userGroups</td>
+<td>オブジェクトリスト</td>
+<td>ユーザグループリスト</td>
+</tr>
+<tr>
+<td>userGroups[*].id</td>
+<td>整数</td>
+<td>ユーザグループ ID</td>
+</tr>
+<tr>
+<td>userGroups[*].name</td>
+<td>文字列</td>
+<td>ユーザグループ名</td>
+</tr>
+<tr>
+<td>userGroups[*].roles</td>
 <td>整数リスト</td>
 <td>ロール ID リスト</td>
 </tr>
