@@ -810,7 +810,7 @@ API Gateway 経由でログインユーザ情報を付与された状態でリ�
 認証必須のリソースが<code>Authorization</code>ヘッダが空のリクエストを受信した場合は 401 レスポンスを返却すれば OK です。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Authorization: User {&quot;id&quot;: XXX, &quot;firstName&quot;: &quot;XXX&quot;, lastName: &quot;XXX&quot;, email: &quot;XXX&quot;, entranceYear: XXX, userGroups: [{&quot;id&quot;: XXX, &quot;name&quot;: &quot;XXX&quot;, roles: []}]}
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Authorization: User {&quot;id&quot;: 1, &quot;firstName&quot;: &quot;太郎&quot;, lastName: &quot;山田&quot;, &quot;email&quot;: &quot;taro_yamada@example.com&quot;, &quot;entranceYear&quot;: 2000, &quot;userGroups&quot;: [{&quot;id&quot;: 1, &quot;name&quot;: &quot;グループA&quot;, roles: [0, 1]}]}
 
 認証タイプをUserにすることでAPI Gateway Patternのユーザ認証を実現する例があったので採用したが、より良い方法があるかも知れない。
 </code></pre></div></td></tr></table></div>
