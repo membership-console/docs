@@ -804,15 +804,14 @@
 <p>API Gateway がログインユーザ情報を取得したのちにリバースプロキシする仕組みを後述していますが、IAM は対象外です。<br />
 認証フィルタをかけずにリバースプロキシされます。</p>
 <h2 id="api-gateway">API Gateway 経由でログインユーザを取得する<a class="headerlink" href="#api-gateway" title="Permanent link">¶</a></h2>
-<p>ユーザがログイン済みの場合は、<code>Authorization</code>ヘッダにログインユーザ情報が付与されます。<br />
+<p>ユーザがログイン済みの場合は、<code>X-Membership-Console-User</code>ヘッダに Base64 でエンコードされたログインユーザ情報が付与されます。<br />
 API Gateway 経由でログインユーザ情報を付与された状態でリバースプロキシされるので、IAM 以外のプロダクトは IAM にログインユーザを問い合わせる必要がありません。</p>
-<p>IAM 以外のプロダクトは、<code>Authorization</code>ヘッダにログインユーザが付与される前提で実装してください。<br />
-認証必須のリソースが<code>Authorization</code>ヘッダが空のリクエストを受信した場合は 401 レスポンスを返却すれば OK です。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Authorization: User {&quot;id&quot;: 1, &quot;firstName&quot;: &quot;太郎&quot;, lastName: &quot;山田&quot;, &quot;email&quot;: &quot;taro_yamada@example.com&quot;, &quot;entranceYear&quot;: 2000, &quot;userGroups&quot;: [{&quot;id&quot;: 1, &quot;name&quot;: &quot;グループA&quot;, roles: [0, 1]}]}
-
-認証タイプをUserにすることでAPI Gateway Patternのユーザ認証を実現する例があったので採用したが、より良い方法があるかも知れない。
+<p>IAM 以外のプロダクトは、<code>X-Membership-Console-User</code>ヘッダにログインユーザが付与される前提で実装してください。<br />
+認証必須のリソースが<code>X-Membership-Console-User</code>ヘッダが空のリクエストを受信した場合は 401 レスポンスを返却すれば OK です。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>X-Membership-Console-User: eyJpZCI6IDEsICJmaXJzdE5hbWUiOiAi5aSq6YOOIiwgbGFzdE5hbWU6ICLlsbHnlLAiLCAiZW1haWwiOiAidGFyb195YW1hZGFAZXhhbXBsZS5jb20iLCAiZW50cmFuY2VZZWFyIjogMjAwMCwgInJvbGVzIjogWyJJQU1fQURNSU4iXSwgInVzZXJHcm91cHMiOiBbeyJpZCI6IDEsICJuYW1lIjogIuOCsOODq+ODvOODl0EiLCByb2xlczogWzBdfV19DQo=
+</code></pre></div></td></tr></table></div>
+<p>Base64 でデコードすると、以下のような json 文字列が得られます。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>{&quot;id&quot;: 1, &quot;firstName&quot;: &quot;太郎&quot;, lastName: &quot;山田&quot;, &quot;email&quot;: &quot;taro_yamada@example.com&quot;, &quot;entranceYear&quot;: 2000, &quot;roles&quot;: [&quot;IAM_ADMIN&quot;], &quot;userGroups&quot;: [{&quot;id&quot;: 1, &quot;name&quot;: &quot;グループA&quot;, roles: [0]}]}
 </code></pre></div></td></tr></table></div>
 <table>
 <thead>
@@ -847,6 +846,11 @@ API Gateway 経由でログインユーザ情報を付与された状態でリ�
 <td>entranceYear</td>
 <td>整数</td>
 <td>入学年度</td>
+</tr>
+<tr>
+<td>roles</td>
+<td>文字列リスト</td>
+<td>ロールリスト</td>
 </tr>
 <tr>
 <td>userGroups</td>
