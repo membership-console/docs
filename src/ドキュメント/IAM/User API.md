@@ -18,6 +18,7 @@ GET
       "lastName": "string",
       "email": "string",
       "entranceYear": 0,
+      "roles": ["IAM_ADMIN"],
       "userGroups": [
         {
           "id": 0,
@@ -48,6 +49,7 @@ GET
   "lastName": "string",
   "email": "string",
   "entranceYear": 0,
+  "roles": ["IAM_ADMIN"],
   "userGroups": [
     {
       "id": 0,
